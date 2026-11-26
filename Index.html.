@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142238">
 <title>FOOTIQ | Football Intelligence</title>
 
@@ -31,13 +31,13 @@ body {
 }
 
 header {
-  padding: 22px 18px;
   background: var(--navy);
-  border-bottom: 2px solid var(--red);
+  border-bottom: 3px solid var(--red);
+  padding: 22px 18px;
 }
 
 .logo {
-  font-size: 27px;
+  font-size: 29px;
   font-weight: 900;
   letter-spacing: 2px;
 }
@@ -48,27 +48,21 @@ header {
 
 .subtitle {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
   margin-top: 5px;
 }
 
 main {
-  width: 100%;
   max-width: 650px;
   margin: auto;
-  padding: 18px 15px 40px;
-}
-
-.section-title {
-  font-size: 18px;
-  margin: 10px 0 15px;
+  padding: 18px 14px 40px;
 }
 
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 15px;
+  border-radius: 14px;
   padding: 18px;
   margin-bottom: 16px;
 }
@@ -81,13 +75,18 @@ main {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
 .match {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
-  margin: 22px 0;
   gap: 10px;
+  margin: 22px 0;
 }
 
 .team {
@@ -110,23 +109,22 @@ main {
 .vs {
   color: var(--red);
   font-weight: bold;
-  font-size: 15px;
 }
 
 label {
   display: block;
-  font-size: 12px;
   color: var(--muted);
+  font-size: 12px;
   margin: 13px 0 6px;
 }
 
 input {
   width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
   background: var(--dark);
   color: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 12px;
   font-size: 15px;
   outline: none;
 }
@@ -146,22 +144,28 @@ input::placeholder {
 }
 
 .team-heading {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
-  margin: 18px 0 5px;
-  color: var(--cream);
+  margin-top: 20px;
+}
+
+.help {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 12px;
 }
 
 button {
   width: 100%;
-  border: none;
+  padding: 15px;
+  margin-top: 18px;
   background: var(--red);
   color: white;
-  padding: 15px;
-  font-size: 14px;
+  border: none;
+  border-radius: 9px;
   font-weight: bold;
-  border-radius: 10px;
-  margin-top: 20px;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -173,14 +177,6 @@ button.secondary {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--cream);
-  margin-top: 10px;
-}
-
-.help {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.6;
-  margin-top: 12px;
 }
 
 .results {
@@ -189,27 +185,51 @@ button.secondary {
 
 .result-score {
   text-align: center;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: bold;
-  margin: 15px 0;
+  margin: 20px 0 8px;
 }
 
 .result-caption {
+  color: var(--muted);
   text-align: center;
+  font-size: 11px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.metric {
+  background: var(--dark);
+  padding: 14px;
+  border-radius: 9px;
+}
+
+.metric-label {
   color: var(--muted);
   font-size: 11px;
 }
 
+.metric-value {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
 .probability {
-  margin: 17px 0;
+  margin: 18px 0;
 }
 
 .probability-top {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
-  margin-bottom: 7px;
   gap: 8px;
+  font-size: 12px;
+  margin-bottom: 7px;
 }
 
 .bar {
@@ -221,66 +241,43 @@ button.secondary {
 
 .fill {
   height: 100%;
+  width: 0;
   background: var(--red);
   border-radius: 20px;
-}
-
-.fill.green {
-  background: var(--green);
 }
 
 .fill.cream {
   background: var(--cream);
 }
 
-.metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.metric {
-  background: var(--dark);
-  padding: 14px;
-  border-radius: 10px;
-}
-
-.metric-value {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.metric-label {
-  font-size: 11px;
-  color: var(--muted);
+.fill.green {
+  background: var(--green);
 }
 
 .score-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 9px;
+  margin-top: 15px;
 }
 
 .score-item {
   background: var(--dark);
-  padding: 10px 13px;
+  padding: 11px;
   border-radius: 8px;
+  font-size: 12px;
   font-weight: bold;
-  font-size: 13px;
 }
 
 .notice {
   background: rgba(200,61,69,.10);
   border: 1px solid rgba(200,61,69,.4);
-  border-radius: 10px;
+  border-radius: 9px;
   padding: 12px;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.6;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 footer {
@@ -291,9 +288,13 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-@media (max-width: 380px) {
-  .team-name { font-size: 14px; }
-  .card { padding: 14px; }
+@media(max-width:380px) {
+  .team-name {
+    font-size: 14px;
+  }
+  .card {
+    padding: 14px;
+  }
 }
 </style>
 </head>
@@ -307,7 +308,7 @@ footer {
 
 <main>
 
-  <div class="card">
+  <section class="card">
     <div class="tag">Match center</div>
 
     <div class="match">
@@ -329,64 +330,64 @@ footer {
         <label>Équipe domicile</label>
         <input id="homeName" value="Arsenal" maxlength="30">
       </div>
+
       <div>
         <label>Équipe extérieure</label>
         <input id="awayName" value="Chelsea" maxlength="30">
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="card">
+  <section class="card">
     <div class="tag">Analyse statistique</div>
-    <h2 class="section-title">Données du match</h2>
+    <h2>Données du match</h2>
 
-    <p class="team-heading">ÉQUIPE DOMICILE</p>
-
-    <div class="grid">
-      <div>
-        <label>Buts marqués / match</label>
-        <input type="number" id="homeGF" placeholder="Ex : 1.8"
-        min="0" max="10" step="0.1">
-      </div>
-
-      <div>
-        <label>Buts encaissés / match</label>
-        <input type="number" id="homeGA" placeholder="Ex : 0.9"
-        min="0" max="10" step="0.1">
-      </div>
-    </div>
-
-    <p class="team-heading">ÉQUIPE EXTÉRIEURE</p>
+    <div class="team-heading">ÉQUIPE DOMICILE</div>
 
     <div class="grid">
       <div>
         <label>Buts marqués / match</label>
-        <input type="number" id="awayGF" placeholder="Ex : 1.4"
-        min="0" max="10" step="0.1">
+        <input type="number" id="homeGF"
+          min="0" max="10" step="0.1" placeholder="Ex : 1.8">
       </div>
 
       <div>
         <label>Buts encaissés / match</label>
-        <input type="number" id="awayGA" placeholder="Ex : 1.2"
-        min="0" max="10" step="0.1">
+        <input type="number" id="homeGA"
+          min="0" max="10" step="0.1" placeholder="Ex : 0.9">
       </div>
     </div>
 
-    <div class="help">
-      Utilise les moyennes de buts marqués et encaissés par match,
-      idéalement sur une période récente et comparable.
+    <div class="team-heading">ÉQUIPE EXTÉRIEURE</div>
+
+    <div class="grid">
+      <div>
+        <label>Buts marqués / match</label>
+        <input type="number" id="awayGF"
+          min="0" max="10" step="0.1" placeholder="Ex : 1.4">
+      </div>
+
+      <div>
+        <label>Buts encaissés / match</label>
+        <input type="number" id="awayGA"
+          min="0" max="10" step="0.1" placeholder="Ex : 1.2">
+      </div>
     </div>
 
-    <button onclick="analyzeMatch()">
-      LANCER L'ANALYSE
-    </button>
-  </div>
+    <p class="help">
+      Renseigne les moyennes de buts marqués et encaissés
+      par match. Utilise une période récente et comparable
+      pour les deux équipes.
+    </p>
+
+    <button id="analyzeBtn">LANCER L'ANALYSE</button>
+  </section>
 
   <div class="results" id="results">
 
-    <div class="card">
+    <section class="card">
       <div class="tag">Prédiction FOOTIQ</div>
-      <h2 class="section-title">Résultat probable</h2>
+      <h2>Résultat probable</h2>
 
       <div class="result-score" id="bestScore">1 - 1</div>
       <div class="result-caption">Score exact le plus probable</div>
@@ -396,25 +397,24 @@ footer {
           <div class="metric-label">Buts attendus domicile</div>
           <div class="metric-value" id="homeXG">0.00</div>
         </div>
+
         <div class="metric">
           <div class="metric-label">Buts attendus extérieur</div>
           <div class="metric-value" id="awayXG">0.00</div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <div class="tag">Probabilités</div>
-      <h2 class="section-title">1X2</h2>
+      <h2>Résultat 1X2</h2>
 
       <div class="probability">
         <div class="probability-top">
           <span id="homeLabel">Arsenal gagne (1)</span>
           <strong id="pHome">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill" id="barHome"></div>
-        </div>
+        <div class="bar"><div class="fill" id="barHome"></div></div>
       </div>
 
       <div class="probability">
@@ -422,9 +422,7 @@ footer {
           <span>Match nul (X)</span>
           <strong id="pDraw">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill cream" id="barDraw"></div>
-        </div>
+        <div class="bar"><div class="fill cream" id="barDraw"></div></div>
       </div>
 
       <div class="probability">
@@ -432,24 +430,20 @@ footer {
           <span id="awayLabel">Chelsea gagne (2)</span>
           <strong id="pAway">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill green" id="barAway"></div>
-        </div>
+        <div class="bar"><div class="fill green" id="barAway"></div></div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <div class="tag">Marchés de buts</div>
-      <h2 class="section-title">Autres probabilités</h2>
+      <h2>Autres probabilités</h2>
 
       <div class="probability">
         <div class="probability-top">
           <span>Plus de 2,5 buts</span>
           <strong id="over25">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill" id="barOver"></div>
-        </div>
+        <div class="bar"><div class="fill" id="barOver"></div></div>
       </div>
 
       <div class="probability">
@@ -457,9 +451,7 @@ footer {
           <span>Moins de 2,5 buts</span>
           <strong id="under25">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill cream" id="barUnder"></div>
-        </div>
+        <div class="bar"><div class="fill cream" id="barUnder"></div></div>
       </div>
 
       <div class="probability">
@@ -467,27 +459,26 @@ footer {
           <span>Les deux équipes marquent</span>
           <strong id="btts">0%</strong>
         </div>
-        <div class="bar">
-          <div class="fill green" id="barBTTS"></div>
-        </div>
+        <div class="bar"><div class="fill green" id="barBTTS"></div></div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
+    <section class="card">
       <div class="tag">Simulation</div>
-      <h2 class="section-title">Scores exacts probables</h2>
+      <h2>Scores exacts probables</h2>
+
       <div class="score-list" id="scoreList"></div>
 
       <div class="notice">
-        Les résultats sont des estimations mathématiques fondées sur
-        les statistiques saisies. Ils ne garantissent pas le résultat
-        réel d'un match.
+        Ces estimations sont calculées à partir des statistiques
+        que tu as saisies. Elles ne garantissent pas le résultat
+        réel d'un match et ne constituent pas un conseil de pari.
       </div>
 
-      <button class="secondary" onclick="resetAnalysis()">
+      <button class="secondary" id="resetBtn">
         NOUVELLE ANALYSE
       </button>
-    </div>
+    </section>
 
   </div>
 
@@ -499,89 +490,113 @@ footer {
 </footer>
 
 <script>
+"use strict";
+
 const $ = id => document.getElementById(id);
 
-function poisson(lambda, k) {
-  let fact = 1;
-  for (let i = 2; i <= k; i++) fact *= i;
-  return Math.exp(-lambda) * Math.pow(lambda, k) / fact;
+function poisson(lambda, goals) {
+  let factorial = 1;
+
+  for (let i = 2; i <= goals; i++) {
+    factorial *= i;
+  }
+
+  return Math.exp(-lambda) *
+    Math.pow(lambda, goals) / factorial;
 }
 
-function percent(value) {
+function formatPercent(value) {
   return (value * 100).toFixed(1) + "%";
 }
 
 function setProbability(valueId, barId, value) {
-  $(valueId).textContent = percent(value);
-  $(barId).style.width = Math.min(100, value * 100) + "%";
+  $(valueId).textContent = formatPercent(value);
+  $(barId).style.width =
+    Math.max(0, Math.min(100, value * 100)) + "%";
 }
 
 function analyzeMatch() {
   const home = $("homeName").value.trim() || "Domicile";
   const away = $("awayName").value.trim() || "Extérieur";
 
-  const hGF = Number($("homeGF").value);
-  const hGA = Number($("homeGA").value);
-  const aGF = Number($("awayGF").value);
-  const aGA = Number($("awayGA").value);
-
   const fields = ["homeGF", "homeGA", "awayGF", "awayGA"];
+  const values = {};
 
   for (const id of fields) {
-    const value = $(id).value;
-    if (value === "" || !Number.isFinite(Number(value)) ||
-        Number(value) < 0 || Number(value) > 10) {
-      alert("Remplis les quatre statistiques avec des valeurs entre 0 et 10.");
+    const raw = $(id).value;
+
+    if (raw === "") {
+      alert("Merci de remplir les quatre statistiques.");
+      $(id).focus();
       return;
     }
+
+    const number = Number(raw);
+
+    if (!Number.isFinite(number) || number < 0 || number > 10) {
+      alert("Les statistiques doivent être comprises entre 0 et 10.");
+      $(id).focus();
+      return;
+    }
+
+    values[id] = number;
   }
 
-  const homeXG = (hGF + aGA) / 2;
-  const awayXG = (aGF + hGA) / 2;
+  const homeXG = (values.homeGF + values.awayGA) / 2;
+  const awayXG = (values.awayGF + values.homeGA) / 2;
 
-  const maxGoals = 10;
-  const homeP = [];
-  const awayP = [];
+  const maxGoals = 12;
+  const homeProb = [];
+  const awayProb = [];
 
   for (let i = 0; i <= maxGoals; i++) {
-    homeP[i] = poisson(homeXG, i);
-    awayP[i] = poisson(awayXG, i);
+    homeProb[i] = poisson(homeXG, i);
+    awayProb[i] = poisson(awayXG, i);
   }
 
-  let winHome = 0;
+  let total = 0;
+  let homeWin = 0;
   let draw = 0;
-  let winAway = 0;
-  let over = 0;
+  let awayWin = 0;
+  let over25 = 0;
   let btts = 0;
-  let scores = [];
+
+  const scores = [];
 
   for (let h = 0; h <= maxGoals; h++) {
     for (let a = 0; a <= maxGoals; a++) {
-      const p = homeP[h] * awayP[a];
+      const probability = homeProb[h] * awayProb[a];
 
-      if (h > a) winHome += p;
-      else if (h === a) draw += p;
-      else winAway += p;
+      total += probability;
 
-      if (h + a > 2) over += p;
-      if (h > 0 && a > 0) btts += p;
+      if (h > a) homeWin += probability;
+      else if (h === a) draw += probability;
+      else awayWin += probability;
+
+      if (h + a > 2) over25 += probability;
+      if (h > 0 && a > 0) btts += probability;
 
       scores.push({
         score: h + " - " + a,
-        probability: p
+        probability: probability
       });
     }
   }
 
-  scores.sort((a, b) => b.probability - a.probability);
+  if (total <= 0) {
+    alert("Impossible de calculer cette analyse.");
+    return;
+  }
 
-  const total = winHome + draw + winAway;
-  winHome /= total;
+  homeWin /= total;
   draw /= total;
-  winAway /= total;
+  awayWin /= total;
+  over25 /= total;
+  btts /= total;
 
-  const under = 1 - over;
-  const both = btts;
+  const under25 = 1 - over25;
+
+  scores.sort((x, y) => y.probability - x.probability);
 
   $("homeDisplay").textContent = home;
   $("awayDisplay").textContent = away;
@@ -593,20 +608,25 @@ function analyzeMatch() {
 
   $("bestScore").textContent = scores[0].score;
 
-  setProbability("pHome", "barHome", winHome);
+  setProbability("pHome", "barHome", homeWin);
   setProbability("pDraw", "barDraw", draw);
-  setProbability("pAway", "barAway", winAway);
-  setProbability("over25", "barOver", over);
-  setProbability("under25", "barUnder", under);
-  setProbability("btts", "barBTTS", both);
+  setProbability("pAway", "barAway", awayWin);
+  setProbability("over25", "barOver", over25);
+  setProbability("under25", "barUnder", under25);
+  setProbability("btts", "barBTTS", btts);
 
-  $("scoreList").innerHTML = "";
+  const list = $("scoreList");
+  list.replaceChildren();
 
   scores.slice(0, 5).forEach(item => {
-    const el = document.createElement("div");
-    el.className = "score-item";
-    el.textContent = item.score + " · " + percent(item.probability);
-    $("scoreList").appendChild(el);
+    const element = document.createElement("div");
+
+    element.className = "score-item";
+    element.textContent =
+      item.score + " · " +
+      formatPercent(item.probability / total);
+
+    list.appendChild(element);
   });
 
   $("results").style.display = "block";
@@ -614,20 +634,25 @@ function analyzeMatch() {
 }
 
 function resetAnalysis() {
+  ["homeGF", "homeGA", "awayGF", "awayGA"].forEach(id => {
+    $(id).value = "";
+  });
+
   $("results").style.display = "none";
-  $("homeGF").value = "";
-  $("homeGA").value = "";
-  $("awayGF").value = "";
-  $("awayGA").value = "";
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+$("analyzeBtn").addEventListener("click", analyzeMatch);
+$("resetBtn").addEventListener("click", resetAnalysis);
+
 $("homeName").addEventListener("input", () => {
-  $("homeDisplay").textContent = $("homeName").value || "Domicile";
+  $("homeDisplay").textContent =
+    $("homeName").value.trim() || "Domicile";
 });
 
 $("awayName").addEventListener("input", () => {
-  $("awayDisplay").textContent = $("awayName").value || "Extérieur";
+  $("awayDisplay").textContent =
+    $("awayName").value.trim() || "Extérieur";
 });
 </script>
 
